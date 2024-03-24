@@ -52,5 +52,4 @@ app.get('/download', (req, res) => {
     const filePath = __dirname + '/public/example.jpg';
     res.setHeader('Content-Disposition', 'attachment; filename=example.jpg');
     res.sendFile(filePath);
-});
-
+}); 

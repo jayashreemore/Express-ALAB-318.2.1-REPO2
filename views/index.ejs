@@ -6,7 +6,19 @@
     <title>Image Download</title>
 </head>
 <body>
-    <h1>Image Download</h1>
+    <h1>Products</h1>
+    <ul>
+        <% products.forEach(product => { %>
+            <li><%= product.name %>: $<%= product.price %></li>
+        <% }); %>
+    </ul>
+    <form action="/submit" method="POST">
+        <input type="text" name="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <!-- Download Image Button -->
+    
     <img src="/public/example.jpg" alt="example Image">
     <br>
     <a href="/download" download="example.jpg"><button>Download Image</button></a>
